@@ -1,0 +1,29 @@
+= Good to know about LinkedList
+
+Each element in the list actually holds a link to the item that follows it, as well as the actual value you are wanting to actually store as well!
+
+The original ArrayList:
+
+image::image-2022-02-28-22-09-11-800.png[]
+
+LinkedList:
+
+image::image-2022-02-28-22-10-11-701.png[]
+
+Original LinkedList with places:
+
+image::image-2022-02-28-22-13-30-185.png[]
+
+Adding new place to LinkedList (we don't have to move any item down! to make room for the new item ...):
+
+see LinkedList bellow after inserting the new item:
+
+image::image-2022-02-28-22-15-13-494.png[]
+
+We insert the new item, and Sydney gonna point to Alice Springs and Alice Springs to Melbourne, so item is inserted!
+
+Removing element as follows:
+
+image::image-2022-02-28-22-16-55-417.png[]
+
+we have to point Brisbane to Canberra (instead of Perth! ...) it means it is removed! Perth will be still pointing to Canberra, but nothing refers to Perth that means the Object will be destroyed by JAVA garbage collector.
