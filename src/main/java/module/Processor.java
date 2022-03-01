@@ -1,8 +1,10 @@
 package module;
 
+import linkedlist.PlacesToVisit;
 import model.Customer;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Processor {
 
@@ -28,5 +30,29 @@ public class Processor {
         for (int i = 0; i < integerArrayList.size(); i++) {
             System.out.println(i + ": " + integerArrayList.get(i));
         }
+
+        System.out.println("----------------------------------");
+        System.out.println("------------LinkedList------------");
+        System.out.println("----------------------------------");
+
+        PlacesToVisit placesToVisit = new PlacesToVisit();
+
+        LinkedList<String> testList = new LinkedList<>();
+        placesToVisit.addElementToLinkedList("Sydney", testList);
+        placesToVisit.addElementToLinkedList("Melbourne", testList);
+        placesToVisit.addElementToLinkedList("Brisbane", testList);
+        placesToVisit.addElementToLinkedList("Perth", testList);
+        placesToVisit.addElementToLinkedList("Canberra", testList);
+        placesToVisit.addElementToLinkedList("Adelaide", testList);
+        placesToVisit.addElementToLinkedList("Darwin", testList);
+        System.out.println(testList.size());
+
+        placesToVisit.printList(testList);
+
+        testList.add(1, "Alice Springs");
+        placesToVisit.printList(testList);
+        testList.remove(4); // took away Perth on the index number 4 (the 5th element)
+
+        placesToVisit.printList(testList);
     }
 }
